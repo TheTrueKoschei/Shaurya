@@ -1,0 +1,19 @@
+# PyClimaExplorer — runtime dependencies
+#
+# No GDAL, fiona or packages.txt needed: geopandas 1.0+ ships prebuilt
+# wheels (via pyogrio) with GDAL bundled. Pinning GDAL through pip forces
+# a system-library version match and is the usual cause of failed builds
+# on Streamlit Community Cloud.
+
+streamlit>=1.40        # st.fragment and st.container(key=...) are required
+numpy>=1.24
+pandas>=2.0
+xarray>=2023.6
+netCDF4>=1.6.5
+h5netcdf>=1.3
+scipy>=1.11
+plotly>=5.18
+geopandas>=1.0
+shapely>=2.0           # shapely.contains_xy clips the globe to India
+pyproj>=3.6
+requests>=2.31         # optional Gemini / Groq / OpenAI calls
