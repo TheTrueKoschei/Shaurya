@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Never commit API keys. On Streamlit Cloud, paste them into
+# App settings -> Secrets instead.
+.streamlit/secrets.toml
+
+# Raw downloads sitting in the repo root. The regional files built
+# from them live in subfolders and ARE committed.
+/*.nc
+
+# Screen-recorder and media leftovers
+*.m4a
+*.mp4
+recording.conf
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
